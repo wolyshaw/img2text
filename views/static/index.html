@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    html, body{
+      margin: 0;
+    }
+    .prview{
+      border-radius: 5px;
+      overflow: hidden;
+      margin: auto;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+    }
+    .word{
+      background-color: rgba(255, 255, 255, .8);
+      border-radius: 5px;
+    }
+    .button{
+      display: block;
+      width: 120px;
+      text-align: center;
+      height: 30px;
+      line-height: 30px;
+      cursor: pointer;
+      border-radius: 5px;
+      border: 1px solid rgba(0, 0, 0, .1);
+      font-size: 12px;
+    }
+    input.hidden{
+      display: block;
+      width: 1px;
+      height: 1px;
+      opacity: 0;
+    }
+    .selectImage{
+      position: relative;
+      display: inline-block;
+    }
+    .selectImage input.hidden{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+    }
+    .form{
+      display: flex;
+      width: 300px;
+      justify-content: space-around;
+      margin: 20px auto;
+    }
+  </style>
+</head>
+<body>
+  <form class="form">
+    <label class="selectImage">
+      <input class="hidden fileInput" required type="file"/>
+      <span class="button" type="button">选择图片</span>
+    </label>
+    <input class="button" type="submit" value="获取文本"/>
+  </form>
+  <div class="prview"></div>
+  <script src="./script.js"></script>
+</body>
+</html>
